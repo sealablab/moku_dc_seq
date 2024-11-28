@@ -1,6 +1,7 @@
 # GHDL project template
 
 A template for RTL design project using GHDL.
+![[moku_makefile.png]]
 
 The directories in the project (and the rule of thumb for each) are:
 
