@@ -1,7 +1,7 @@
 # GHDL project template
 
 A template for RTL design project using GHDL.
-![[moku_makefile.png]]
+![splash](https://github.com/sealablab/moku_dc_seq/blob/trunk/moku_makefile.png?raw=true)
 
 The directories in the project (and the rule of thumb for each) are:
 
