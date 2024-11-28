@@ -56,6 +56,7 @@ architecture Behavioural of moku_dc_seq is
     );
 
     constant HI_LVL : signed(15 downto 0) := x"7FFF";
+    constant MED_LVL : signed(15 downto 0) := x"1A90";
     constant LO_LVL : signed(15 downto 0) := x"0000";
 
     signal HIThreshold : signed(15 downto 0);
@@ -64,10 +65,12 @@ architecture Behavioural of moku_dc_seq is
     signal Step : std_logic;
     signal Trigger, TriggerDly : std_logic;
     signal DCLevelAddr : unsigned(6 downto 0);
+ 	signal OutA_En : std_logic;
 begin
 
     HIThreshold <= signed(Control0(31 downto 16));
     LOThreshold <= signed(Control0(15 downto 0));
+	OutA_En <= Control4(0);
 
     -- Input Schmitt trigger functionality
     -- to help reduce trigger on noise
@@ -101,10 +104,10 @@ begin
         end if;
     end process;
 
-    process(Clk) is
+    process(Clk, OutA_EN) is
     begin
         if rising_edge(Clk) then
-            OutputA <= DC(to_integer(DCLevelAddr));
+            OutputA <= DC(to_integer(DCLevelAddr)) when OutA_En = '0' else MED_LVL;
         end if;
     end process;
 
