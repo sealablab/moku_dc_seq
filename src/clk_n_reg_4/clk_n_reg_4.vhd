@@ -2,8 +2,9 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-entity clk_n_regs_4 is 
+entity clk_n_reg_4 is 
   port (
 		 -- Inputs
 		clk		: in std_logic;
@@ -16,10 +17,17 @@ entity clk_n_regs_4 is
 		count	: out std_logic_vector(3 downto 0);
 		stop_d2	: out std_logic
     );
-end clk_n_regs_4;
+end entity clk_n_reg_4;
 
-architecture arch of clk_n_regs_4 is
+
+-- Architcture block 
+architecture clk_n_reg_4_arch of clk_n_reg_4 is
+	--- intermediate signal definitions 
+	signal cnt_en	: std_logic;
+	signal count_us	: unsigned(3 downto 0);
+
 begin
-	-- code goes here
-end arch;
+	cnt_en <= '1';	
+	
+end architecture;
 
