@@ -29,6 +29,7 @@ architecture clk_n_reg_4_arch of clk_n_reg_4 is
 
 begin
 	cnt_en <= '1';	
+	-- # JCRET2HERE 20241125
 	
 end architecture;
 
