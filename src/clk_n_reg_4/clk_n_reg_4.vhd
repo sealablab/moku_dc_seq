@@ -25,6 +25,7 @@ architecture clk_n_reg_4_arch of clk_n_reg_4 is
 	--- intermediate signal definitions 
 	signal cnt_en	: std_logic;
 	signal count_us	: unsigned(3 downto 0);
+	signal stop_dl	: std_logic;
 
 begin
 	cnt_en <= '1';	
