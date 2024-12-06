@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+--- jc: createing a new branch (jc-dev1) while i mess around
 --- I don't know how to #include this from another file, so. just pasting it here
 entity moku_dc_seq is
     port (
