@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 from functools import total_ordering
+# python -m unittest test_kvmv.py
+
 
 @total_ordering
 @dataclass
 class KvMv:
     v: int  # 5-bit value for whole volts (0-31)
-    mv: int  # 10-bit base-2 value for fractional volts (0-1023)
+    mv: int = 0  # 10-bit base-2 value for fractional volts (0-1023)
     sign: int = 0  # 1 for negative, 0 for positive
 
     def __post_init__(self):
