@@ -27,6 +27,8 @@ end entity;
 -- # See Alsp
 -- ## [CustomWrapper](https://compile.liquidinstruments.com/docs/wrapper.html#wrapper-ports)(EXT)
 -- ## [CustomWrapper](https://publish.obsidian.md/sealablab/Lab/DevBoards/Moku/Moku-N/Moku-CustomWrapper)(Obsidian)
+-- https://compile.liquidinstruments.com/docs/io.html#analog-i-o-scaling
+-- https://publish.obsidian.md/sealablab/Lab/DevBoards/Moku/Moku-N/moku+analog+scaling 
 
 --
 
